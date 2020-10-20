@@ -24,8 +24,15 @@ const BlogPostForm = ({onSubmit, initialValues}) => {
         onPress={() =>onSubmit(title, content)}
       />
     </View>
-  );
+  ); 
 };
+
+BlogPostForm.defaultProps = {
+    initialValues: { 
+        title: '',
+        content: ''
+    }
+}
 
 const styles = StyleSheet.create({
     input: {
